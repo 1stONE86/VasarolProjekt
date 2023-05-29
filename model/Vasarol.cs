@@ -140,7 +140,7 @@ namespace VasarolProjekt.Model
 
         public int Vegosszeg
         {
-            get { return _ertekTej * _tejDb + _ertekKenyer * _kenyerDb + _ertekSajt * _sajtDb + _ertekKrumpli * _krumpliDb + _ertekSzalami * _szalamiDb + _ertekCukor * _cukorDb + _ertekOlaj * _olajDb; }
+            get { return this._ertekTej * this._tejDb + this._ertekKenyer * this._kenyerDb + this._ertekSajt * this._sajtDb + this._ertekKrumpli * this._krumpliDb + this._ertekSzalami * this._szalamiDb + this._ertekCukor * this._cukorDb + this._ertekOlaj * this._olajDb; }
         }
     }
 }

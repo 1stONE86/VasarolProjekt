@@ -9,41 +9,41 @@
     <StackPanel Orientation="Vertical" Margin="0,0,26,10">
         <StackPanel Orientation="Horizontal">
             <TextBlock Background="Aqua" Text="Tej (1 liter ár=400Ft):" Margin="2 10 2 2"/>
-            <TextBox x:Name="txttej" Margin="2 10 1 1" Width="50" Text="{Binding TejDb,Mode=TwoWay}" TextAlignment="Center" Background="#FF78DA37"/>
+            <TextBox x:Name="txttej" Margin="2 10 1 1" Width="50" Text="{Binding Tej,Mode=TwoWay}" TextAlignment="Center" Background="#FF78DA37"/>
         </StackPanel>
         <StackPanel Orientation="Horizontal">
             <TextBlock Background="Aqua" Text="Kenyér (1 kg ár=800Ft):" Margin="2 10 2 2"/>
-            <TextBox x:Name="txtkenyer" Margin="2 10 1 1" Width="50" Text="{Binding KenyerDb,Mode=TwoWay}" TextAlignment="Center" Background="#FF78DA37"/>
+            <TextBox x:Name="txtkenyer" Margin="2 10 1 1" Width="50" Text="{Binding Kenyer,Mode=TwoWay}" TextAlignment="Center" Background="#FF78DA37"/>
         </StackPanel>
         <StackPanel Orientation="Horizontal">
             <TextBlock Background="Aqua" Text="Sajt (1 kg ár=3000Ft):" Margin="2 10 2 2"/>
-            <TextBox x:Name="txtsajt" Margin="2 10 1 1" Width="50" Text="{Binding SajtDb,Mode=TwoWay}" TextAlignment="Center" Background="#FF78DA37"/>
+            <TextBox x:Name="txtsajt" Margin="2 10 1 1" Width="50" Text="{Binding Sajt,Mode=TwoWay}" TextAlignment="Center" Background="#FF78DA37"/>
         </StackPanel>
         <StackPanel Orientation="Horizontal">
             <TextBlock Background="Aqua" Text="Krumpli (1 kg ár=500Ft):" Margin="2 10 2 2"/>
-            <TextBox x:Name="txtkrumpli" Margin="2 10 1 1" Width="50" Text="{Binding KrumpliDb,Mode=TwoWay}" TextAlignment="Center" Background="#FF78DA37"/>
+            <TextBox x:Name="txtkrumpli" Margin="2 10 1 1" Width="50" Text="{Binding Krumpli,Mode=TwoWay}" TextAlignment="Center" Background="#FF78DA37"/>
         </StackPanel>
         <StackPanel Orientation="Horizontal">
             <TextBlock Background="Aqua" Text="Szalámi (1 kg ár=3500Ft):" Margin="2 10 2 2"/>
-            <TextBox x:Name="txtszalami" Margin="2 10 1 1" Width="50" Text="{Binding SzalamiDb,Mode=TwoWay}" TextAlignment="Center" Background="#FF78DA37"/>
+            <TextBox x:Name="txtszalami" Margin="2 10 1 1" Width="50" Text="{Binding Szalami,Mode=TwoWay}" TextAlignment="Center" Background="#FF78DA37"/>
         </StackPanel>
         <StackPanel Orientation="Horizontal">
             <TextBlock Background="Aqua" Text="Cukor (1 kg ár=329Ft):" Margin="2 10 2 2"/>
-            <TextBox x:Name="txtcukor" Margin="2 10 1 1" Width="50" Text="{Binding CukorDb,Mode=TwoWay}" TextAlignment="Center" Background="#FF78DA37"/>
+            <TextBox x:Name="txtcukor" Margin="2 10 1 1" Width="50" Text="{Binding Cukor,Mode=TwoWay}" TextAlignment="Center" Background="#FF78DA37"/>
         </StackPanel>
         <StackPanel Orientation="Horizontal">
             <TextBlock Background="Aqua" Text="Olaj (1 liter ár=600Ft):" Margin="2 10 2 2"/>
-            <TextBox x:Name="txtolaj" Margin="2 10 1 1" Width="50" Text="{Binding OlajDb,Mode=TwoWay}" TextAlignment="Center" Background="#FF78DA37"/>
+            <TextBox x:Name="txtolaj" Margin="2 10 1 1" Width="50" Text="{Binding Olaj,Mode=TwoWay}" TextAlignment="Center" Background="#FF78DA37"/>
         </StackPanel>
         <StackPanel Orientation="Horizontal">
             <Button x:Name="btvegosszegb" 
                     Width="130" 
                     Content="Végösszeg"
-                    Command="{Binding Szamitas}" BorderThickness="2,2,2,1" BorderBrush="#FF6FDA1A" RenderTransformOrigin="0.515,2.973"/>
+                    Command="{Binding Szamitas}"  BorderThickness="2,2,2,1" BorderBrush="#FF6FDA1A" RenderTransformOrigin="0.515,2.973"/>
         </StackPanel>
         <StackPanel Orientation="Horizontal" Margin="10,10,10,10">
             <TextBlock x:Name="btvegosszeg" Margin="10 10 10 10" Width="300" 
-                       Text="{Binding Vegosszeg}" Height="27" />
+                       Text="{Binding Vegosszeg}" Height="25" Background="Yellow"/>
         </StackPanel>
     </StackPanel>
 </Window>
