@@ -12,13 +12,13 @@ namespace VasarolProjekt.ViewModel
     public class VasarolViewModel : ViewModelBase
     {
         private Vasarol _vasarol;
-        public RelayCommand CloseCommand { get; private set; }
-        public RelayCommand VegosszegCommand { get; private set; }
+        public RelayCommand CloseParancs { get; private set; }
+        public RelayCommand VegosszegParancs { get; private set; }
         public VasarolViewModel()
         {
             _vasarol = new Vasarol(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-            CloseCommand = new RelayCommand(Execute => Kilepes());
-            VegosszegCommand = new RelayCommand(Execute => Szamitas());
+            CloseParancs = new RelayCommand(Execute => Kilepes());
+            VegosszegParancs = new RelayCommand(Execute => Szamitas());
         }
 
         private void Kilepes()
