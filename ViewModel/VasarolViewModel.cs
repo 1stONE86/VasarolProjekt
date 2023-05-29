@@ -16,7 +16,7 @@ namespace VasarolProjekt.ViewModel
         public RelayCommand VegosszegParancs { get; private set; }
         public VasarolViewModel()
         {
-            _vasarol = new Vasarol(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+            _vasarol = new Vasarol(400, 0, 800, 0, 3000, 0, 500, 0, 3500, 0, 329, 0, 600, 0);
             CloseParancs = new RelayCommand(Execute => Kilepes());
             VegosszegParancs = new RelayCommand(Execute => Szamitas());
         }
