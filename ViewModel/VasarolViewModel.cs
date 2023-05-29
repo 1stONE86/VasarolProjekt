@@ -16,7 +16,7 @@ namespace VasarolProjekt.ViewModel
         public RelayCommand VegosszegParancs { get; private set; }
         public VasarolViewModel()
         {
-            _vasarol = new Vasarol(400, 0, 800, 0, 3000, 0, 500, 0, 3500, 0, 329, 0, 600, 0);
+            _vasarol = new Vasarol(400, 0, 800,0, 3000, 0, 500, 0, 3500, 0, 329, 0, 600, 0);
             CloseParancs = new RelayCommand(Execute => Kilepes());
             VegosszegParancs = new RelayCommand(Execute => Szamitas());
         }
@@ -34,7 +34,9 @@ namespace VasarolProjekt.ViewModel
             }
             set
             {
-                _vasarol.TejDb = value;
+                _vasarol.TejDb =value;
+                OnPropertyChanged(nameof(Tej));
+                OnPropertyChanged(nameof(Vegosszeg));
             }
         }
         public int TejFt
@@ -57,6 +59,8 @@ namespace VasarolProjekt.ViewModel
             set
             {
                 _vasarol.KenyerDb = value;
+                OnPropertyChanged(nameof(Kenyer));
+                OnPropertyChanged(nameof(Vegosszeg));
             }
         }
         public int KenyerFt
@@ -80,6 +84,8 @@ namespace VasarolProjekt.ViewModel
             set
             {
                 _vasarol.SajtDb = value;
+                OnPropertyChanged(nameof(Sajt));
+                OnPropertyChanged(nameof(Vegosszeg));
             }
         }
         public int SajtFt
@@ -103,6 +109,8 @@ namespace VasarolProjekt.ViewModel
             set
             {
                 _vasarol.KrumpliDb = value;
+                OnPropertyChanged(nameof(Krumpli));
+                OnPropertyChanged(nameof(Vegosszeg));
             }
         }
         public int KrumpliFt
@@ -126,6 +134,8 @@ namespace VasarolProjekt.ViewModel
             set
             {
                 _vasarol.SzalamiDb = value;
+                OnPropertyChanged(nameof(Szalami));
+                OnPropertyChanged(nameof(Vegosszeg));
             }
         }
         public int SzalamiFt
@@ -149,6 +159,8 @@ namespace VasarolProjekt.ViewModel
             set
             {
                 _vasarol.CukorDb = value;
+                OnPropertyChanged(nameof(Cukor));
+                OnPropertyChanged(nameof(Vegosszeg));
             }
         }
         public int CukorFt
@@ -172,6 +184,8 @@ namespace VasarolProjekt.ViewModel
             set
             {
                 _vasarol.OlajDb = value;
+                OnPropertyChanged(nameof(Olaj));
+                OnPropertyChanged(nameof(Vegosszeg));
             }
         }
         public int OlajFt
