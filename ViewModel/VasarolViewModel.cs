@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using VasarolProjekt.Model;
 using VasarolProjekt.ViewModel.BaseClass;
 
@@ -33,7 +34,7 @@ namespace VasarolProjekt.ViewModel
             }
             set
             {
-                _tejDb.TejDb = value;
+                _vasarol.TejDb = value;
             }
         }
         public int Kenyer
@@ -44,7 +45,7 @@ namespace VasarolProjekt.ViewModel
             }
             set
             {
-                _kenyerDb.KenyerDb = value;
+                _vasarol.KenyerDb = value;
             }
         }
         public int Sajt
@@ -55,7 +56,7 @@ namespace VasarolProjekt.ViewModel
             }
             set
             {
-                _sajt.SajtDb = value;
+                _vasarol.SajtDb = value;
             }
         }
         public int Krumpli
@@ -66,7 +67,7 @@ namespace VasarolProjekt.ViewModel
             }
             set
             {
-                _krmpliDb.KrumpliDb = value;
+                _vasarol.KrumpliDb = value;
             }
         }
         public int Szalami
@@ -77,7 +78,7 @@ namespace VasarolProjekt.ViewModel
             }
             set
             {
-                _szalamiDb.SzalamiDb = value;
+                _vasarol.SzalamiDb = value;
             }
         }
         public int Cukor
@@ -88,7 +89,7 @@ namespace VasarolProjekt.ViewModel
             }
             set
             {
-                _cukorDb.CukorDb = value;
+                _vasarol.CukorDb = value;
             }
         }
         public int Olaj
@@ -99,7 +100,7 @@ namespace VasarolProjekt.ViewModel
             }
             set
             {
-                _olajDb.OlajDb = value;
+                _vasarol.OlajDb = value;
             }
         }
 
@@ -118,3 +119,4 @@ namespace VasarolProjekt.ViewModel
 
     }
 }
+
