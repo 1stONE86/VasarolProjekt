@@ -39,11 +39,11 @@
             <Button x:Name="btvegosszegb" 
                     Width="130" 
                     Content="Végösszeg"
-                    Command="{Binding Vegosszeg}" BorderThickness="2,2,2,1" BorderBrush="#FF6FDA1A" RenderTransformOrigin="0.515,2.973"/>
+                    Command="{Binding Szamitas}" BorderThickness="2,2,2,1" BorderBrush="#FF6FDA1A" RenderTransformOrigin="0.515,2.973"/>
         </StackPanel>
-        <StackPanel Orientation="Horizontal" Margin="1,1,1,1">
-            <TextBlock x:Name="btvegosszeg" Margin="10 10 10 10" 
-                       Text="{Binding Vegosszeg}" />
+        <StackPanel Orientation="Horizontal" Margin="10,10,10,10">
+            <TextBlock x:Name="btvegosszeg" Margin="10 10 10 10" Width="300" 
+                       Text="{Binding Vegosszeg}" Height="27" />
         </StackPanel>
     </StackPanel>
 </Window>
