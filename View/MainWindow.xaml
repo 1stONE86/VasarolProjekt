@@ -5,8 +5,45 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VasarolProjekt"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
-    </Grid>
+        Title="MainWindow" Height="650" Width="800" Background="DarkRed">
+    <StackPanel Orientation="Vertical" Margin="0,0,26,10">
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Background="Aqua" Text="Tej (1 liter ár=400Ft):" Margin="2 10 2 2"/>
+            <TextBox x:Name="txttej" Margin="2 10 1 1" Width="50" Text="{Binding Tej,Mode=TwoWay}" TextAlignment="Center" Background="#FF78DA37"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Background="Aqua" Text="Kenyér (1 kg ár=800Ft):" Margin="2 10 2 2"/>
+            <TextBox x:Name="txtkenyer" Margin="2 10 1 1" Width="50" Text="{Binding Kenyer,Mode=TwoWay}" TextAlignment="Center" Background="#FF78DA37"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Background="Aqua" Text="Sajt (1 kg ár=3000Ft):" Margin="2 10 2 2"/>
+            <TextBox x:Name="txtsajt" Margin="2 10 1 1" Width="50" Text="{Binding Sajt,Mode=TwoWay}" TextAlignment="Center" Background="#FF78DA37"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Background="Aqua" Text="Krumpli (1 kg ár=500Ft):" Margin="2 10 2 2"/>
+            <TextBox x:Name="txtkrumpli" Margin="2 10 1 1" Width="50" Text="{Binding Krumpli,Mode=TwoWay}" TextAlignment="Center" Background="#FF78DA37"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Background="Aqua" Text="Szalámi (1 kg ár=3500Ft):" Margin="2 10 2 2"/>
+            <TextBox x:Name="txtszalami" Margin="2 10 1 1" Width="50" Text="{Binding Szalami,Mode=TwoWay}" TextAlignment="Center" Background="#FF78DA37"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Background="Aqua" Text="Cukor (1 kg ár=329Ft):" Margin="2 10 2 2"/>
+            <TextBox x:Name="txtcukor" Margin="2 10 1 1" Width="50" Text="{Binding Cukor,Mode=TwoWay}" TextAlignment="Center" Background="#FF78DA37"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Background="Aqua" Text="Olaj (1 liter ár=600Ft):" Margin="2 10 2 2"/>
+            <TextBox x:Name="txtolaj" Margin="2 10 1 1" Width="50" Text="{Binding Olaj,Mode=TwoWay}" TextAlignment="Center" Background="#FF78DA37"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Button x:Name="btvegosszegb" 
+                    Width="130" 
+                    Content="Végösszeg"
+                    Command="{Binding Vegosszeg}" BorderThickness="2,2,2,1" BorderBrush="#FF6FDA1A" RenderTransformOrigin="0.515,2.973"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="1,1,1,1">
+            <TextBlock x:Name="btvegosszeg" Margin="10 10 10 10" 
+                       Text="{Binding Vegosszeg}" />
+        </StackPanel>
+    </StackPanel>
 </Window>
