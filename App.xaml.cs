@@ -16,10 +16,11 @@ namespace VasarolProjekt
         protected override void OnStartup(StartupEventArgs e)
         {
             MainWindow window = new MainWindow();
-            BelyegViewModel viewModel = new BelyegViewModel();
+            VasarolViewModel viewModel = new VasarolViewModel();
             window.DataContext = viewModel;
-            window.Show();
             base.OnStartup(e);
+            window.Show();
+            
         }
     }
 }
