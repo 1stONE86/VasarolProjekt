@@ -37,6 +37,17 @@ namespace VasarolProjekt.ViewModel
                 _vasarol.TejDb = value;
             }
         }
+        public int TejFt
+        {
+            get
+            {
+                return _vasarol.TejAr;
+            }
+            set
+            {
+                _vasarol.TejAr = 400;
+            }
+        }
         public int Kenyer
         {
             get
@@ -48,6 +59,18 @@ namespace VasarolProjekt.ViewModel
                 _vasarol.KenyerDb = value;
             }
         }
+        public int KenyerFt
+        {
+            get
+            {
+                return _vasarol.KenyerAr;
+            }
+            set
+            {
+                _vasarol.KenyerAr = 800;
+            }
+        }
+
         public int Sajt
         {
             get
@@ -59,6 +82,18 @@ namespace VasarolProjekt.ViewModel
                 _vasarol.SajtDb = value;
             }
         }
+        public int SajtFt
+        {
+            get
+            {
+                return _vasarol.SajtAr;
+            }
+            set
+            {
+                _vasarol.SajtAr = 3000;
+            }
+        }
+
         public int Krumpli
         {
             get
@@ -70,6 +105,18 @@ namespace VasarolProjekt.ViewModel
                 _vasarol.KrumpliDb = value;
             }
         }
+        public int KrumpliFt
+        {
+            get
+            {
+                return _vasarol.KrumpliAr;
+            }
+            set
+            {
+                _vasarol.KrumpliAr = 500;
+            }
+        }
+
         public int Szalami
         {
             get
@@ -81,6 +128,18 @@ namespace VasarolProjekt.ViewModel
                 _vasarol.SzalamiDb = value;
             }
         }
+        public int SzalamiFt
+        {
+            get
+            {
+                return _vasarol.SzalamiAr;
+            }
+            set
+            {
+                _vasarol.SzalamiAr = 3500;
+            }
+        }
+
         public int Cukor
         {
             get
@@ -92,6 +151,18 @@ namespace VasarolProjekt.ViewModel
                 _vasarol.CukorDb = value;
             }
         }
+        public int CukorFt
+        {
+            get
+            {
+                return _vasarol.CukorAr;
+            }
+            set
+            {
+                _vasarol.CukorAr = 329;
+            }
+        }
+
         public int Olaj
         {
             get
@@ -103,12 +174,23 @@ namespace VasarolProjekt.ViewModel
                 _vasarol.OlajDb = value;
             }
         }
+        public int OlajFt
+        {
+            get
+            {
+                return _vasarol.OlajAr;
+            }
+            set
+            {
+                _vasarol.OlajAr = 600;
+            }
+        }
 
         public string Vegosszeg
         {
             get
             {
-                return $"A fizetendő összeg{_vasarol.Vegosszeg} Ft";
+                return $"A fizetendő összeg {_vasarol.Vegosszeg} Ft";
             }
         }
 
