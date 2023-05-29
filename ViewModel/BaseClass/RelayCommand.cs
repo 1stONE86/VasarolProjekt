@@ -7,7 +7,7 @@ using System.Windows.Input;
 
 namespace VasarolProjekt.ViewModel.BaseClass
 {
-    internal class RelayCommand
+    public class RelayCommand
     {
         private Action<object> execute;
         private Func<object, bool> canExecute;
