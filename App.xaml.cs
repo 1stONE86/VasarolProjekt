@@ -13,5 +13,13 @@ namespace VasarolProjekt
     /// </summary>
     public partial class App : Application
     {
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            MainWindow window = new MainWindow();
+            BelyegViewModel viewModel = new BelyegViewModel();
+            window.DataContext = viewModel;
+            window.Show();
+            base.OnStartup(e);
+        }
     }
 }

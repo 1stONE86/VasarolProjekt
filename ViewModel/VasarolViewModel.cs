@@ -4,24 +4,32 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using VasarolProjekt.Model;
+using VasarolProjekt.ViewModel.BaseClass;
 
 namespace VasarolProjekt.ViewModel
 {
-    public class VasarolViewModel
+    public class VasarolViewModel : ViewModelBase
     {
-        private Vasarol vasarol;
+        private Vasarol _vasarol;
         public RelayCommand CloseCommand { get; private set; }
-        public RelayCommand Vegosszeg { get; private set; }
+        public RelayCommand VegosszegCommand { get; private set; }
         public VasarolViewModel()
         {
-            vasarol = new Vasarol(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-        
+            _vasarol = new Vasarol(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+            CloseCommand = new RelayCommand(Execute => Kilepes());
+            VegosszegCommand = new RelayCommand(Execute => Szamitas());
+        }
+
+        private void Kilepes()
+        {
+            Application.Current.Windows[0].Close();
+        }
 
         public int Tej
         {
             get
             {
-                return vasarol.TejDb;
+                return _vasarol.TejDb;
             }
             set
             {
@@ -32,7 +40,7 @@ namespace VasarolProjekt.ViewModel
         {
             get
             {
-                return vasarol.KenyerDb;
+                return _vasarol.KenyerDb;
             }
             set
             {
@@ -43,7 +51,7 @@ namespace VasarolProjekt.ViewModel
         {
             get
             {
-                return vasarol.SajtDb;
+                return _vasarol.SajtDb;
             }
             set
             {
@@ -54,7 +62,7 @@ namespace VasarolProjekt.ViewModel
         {
             get
             {
-                return vasarol.KrumpliDb;
+                return _vasarol.KrumpliDb;
             }
             set
             {
@@ -65,7 +73,7 @@ namespace VasarolProjekt.ViewModel
         {
             get
             {
-                return vasarol.SzalamiDb;
+                return _vasarol.SzalamiDb;
             }
             set
             {
@@ -76,7 +84,7 @@ namespace VasarolProjekt.ViewModel
         {
             get
             {
-                return vasarol.CukorDb;
+                return _vasarol.CukorDb;
             }
             set
             {
@@ -87,13 +95,26 @@ namespace VasarolProjekt.ViewModel
         {
             get
             {
-                return vasarol.OlajDb;
+                return _vasarol.OlajDb;
             }
             set
             {
                 _olajDb.OlajDb = value;
             }
         }
-    
+
+        public string Vegosszeg
+        {
+            get
+            {
+                return $"A fizetendő összeg{_vasarol.Vegosszeg} Ft";
+            }
+        }
+
+        public void Szamitas()
+        {
+            OnPropertyChanged(nameof(Vegosszeg));
+        }
+
     }
 }
